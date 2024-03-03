@@ -1,4 +1,6 @@
-const express = require('express');
+import express from 'express';
+import scraperRouter from './routes/scraper.route';
+
 const app = express();
 const port = 3000;
 
@@ -6,6 +8,8 @@ const port = 3000;
 app.get('/health', (req, res) => {
   res.send('Hello World!');
 });
+
+app.use(scraperRouter);
 
 // Start the server
 app.listen(port, () => {
