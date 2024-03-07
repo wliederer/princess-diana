@@ -1,5 +1,7 @@
 import express from 'express';
 import scraperRouter from './routes/scraper.route';
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
 const port = 3000;
